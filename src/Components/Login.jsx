@@ -1,28 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Login = ({user, setUser}) => {
+    const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('')
+    const [conpass, setConpass] = useState('')
     const userLogin = () => {
         setUser(true)
+        setUsername('')
+        setPassword('')
+        setConpass('')
     }
+
   return (
-    <div className='h-screen w-full bg-zinc-900 flex items-center justify-center text-[white]'>
-        <div className="w-[400px] h-[500px] bg-slate-700 rounded-[40px] p-8">
-            <h3 className='text-center text-5xl'>Register</h3>
-            <h5 className='text-center mt-1 text-[15px]'>Sign up to continue</h5>
+    <div className='h-screen w-full bg-zinc-900 flex flex-col items-center justify-center'>
+        <div className="text-slate-700 leading-none text-8xl">Quick Files</div>
+        <div className="w-[400px] h-[500px] bg-slate-700 rounded-[40px] p-8 mt-16">
+            <h3 className='text-center text-5xl text-[#F4E4BA]'>Register</h3>
+            <h5 className='text-center mt-1 text-[15px] text-[#F4E4BA]'>Sign up to continue</h5>
             <form className='mt-10 text-xl px-3'>
                 <div className="mb-6">
-                    <input className="outline-none bg-transparent text-[#C46D5E]" type="text" placeholder='Username' />
+                    <input value={username} onChange={(e)=>{setUsername(e.target.value)}} className="outline-none bg-transparent text-[#C46D5E]" type="text" placeholder='Username' />
                     <hr style={{borderColor: '#C46D5E'}} />
                 </div>
                 <div className="mb-6">
-                    <input className="outline-none bg-transparent text-[#C46D5E]" type="password" placeholder='Make a Password' />
+                    <input value={password} onChange={(e)=>{setPassword(e.target.value)}} className="outline-none bg-transparent text-[#C46D5E]" type="password" placeholder='Make a Password' />
                     <hr style={{borderColor: '#C46D5E'}} />
                 </div>
                 <div className="">
-                    <input className="outline-none bg-transparent text-[#C46D5E]" type="password" placeholder='Confirm Password' />
+                    <input value={conpass} onChange={(e)=>{setConpass(e.target.value)}} className="outline-none bg-transparent text-[#C46D5E]" type="password" placeholder='Confirm Password' />
                     <hr style={{borderColor: '#C46D5E'}} />
                 </div>
-                <button onClick={userLogin} className='w-full p-2 rounded-lg text-4xl text-center bg-[#778472] mt-10'>Sign Up</button>
+                <button onClick={userLogin} className='w-full p-2 rounded-lg text-4xl text-center bg-[#778472] text-white mt-10'>Sign Up</button>
             </form>
         </div>
     </div>
