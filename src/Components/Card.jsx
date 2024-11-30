@@ -6,7 +6,7 @@ import { motion } from "motion/react"
 
 const Card = ({reference, name, url, size}) => {
   return (
-    <motion.div drag dragConstraints={reference} whileDrag={{scale: 1.1}} dragElastic={.3} dragMomentum={false} className='w-60 h-72 bg-zinc-600/90 rounded-[40px] text-white relative p-8 overflow-hidden'>
+    <motion.div drag dragConstraints={reference} whileDrag={{scale: 1.1}} dragElastic={.7} className='w-60 h-72 bg-zinc-600/90 rounded-[40px] text-white relative p-8 overflow-hidden'>
         <div className="flex justify-between">
             <FaRegFileAlt size='20' />
             <span className='cursor-pointer'><IoMdCloseCircle color='red' size='23' /></span>
