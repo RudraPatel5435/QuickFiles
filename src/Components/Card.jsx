@@ -6,10 +6,10 @@ import { motion } from "motion/react"
 
 const Card = ({reference, name, url, size}) => {
   return (
-    <motion.div drag dragConstraints={reference} whileDrag={{scale: 1.1}} dragElastic={.7} className='w-60 h-72 bg-zinc-600/90 rounded-[40px] text-white relative p-8 overflow-hidden'>
+    <motion.div drag dragConstraints={reference} whileDrag={{scale: 1.1}} dragElastic={.7} className='w-60 h-72 bg-slate-600/95 rounded-[40px] text-white relative p-8 overflow-hidden'>
         <div className="flex justify-between">
             <FaRegFileAlt size='20' />
-            <span className='cursor-pointer'><IoMdCloseCircle color='red' size='23' /></span>
+            <span className='cursor-pointer text-[#D71709]'><IoMdCloseCircle size='23' /></span>
         </div>
         <p className='mt-5 font-semibold'>{name}</p>
         <div className="footer absolute bottom-0 left-0 w-full">
@@ -19,7 +19,7 @@ const Card = ({reference, name, url, size}) => {
                     <a href=''><IoArrowDownOutline size='20' color='black' /></a>
                 </span>
             </div>
-            <div className="cursor-pointer tag w-full py-3 bg-green-600 text-center">
+            <div className="cursor-pointer tag w-full py-3 bg-[#659B5E] text-center">
                 <a href=''><h3 className='text-lg font-semibold'>Download</h3></a>
             </div>
         </div>
