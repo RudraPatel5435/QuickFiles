@@ -6,8 +6,8 @@ const Login = ({setUser, setLogin}) => {
     const [conpass, setConpass] = useState('')
     const userSignup = (e) => {
         e.preventDefault()
-        setUser(false)
-        setLogin('login')
+        setUser(true)
+        setLogin(true)
         setUsername('')
         setPassword('')
         setConpass('')

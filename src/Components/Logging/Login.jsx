@@ -26,7 +26,7 @@ const Login = ({setUser, setLogin}) => {
                 </div>
                 <button onClick={(e)=>{userLogin(e)}} className='w-full p-2 rounded-lg text-4xl text-center bg-[#778472] text-white mt-4'>Login</button>
                 <div className="mt-10 flex gap-1">
-                    <h5 className='text-white text-lg'>Don't have an account ?</h5>
+                    <h5 className='text-white text-lg'>Need an account ?</h5>
                     <h6 onClick={()=>{setLogin(false)}} className='text-[#C46D5E] text-lg underline cursor-pointer'>Sign Up</h6>
                 </div>
             </form>
