@@ -7,11 +7,14 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(cors())
-app.use(bodyParser.json())
 
-app.post('/', (req, res)=>{
+app.post('/', async (req, res)=>{
     console.log(req.body)
-    
+    let {username, password} = req.body
+    let createdUser = await userModel.create({
+        name: username,
+        password
+    })
     res.send('')
 })
 

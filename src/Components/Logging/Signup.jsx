@@ -11,7 +11,7 @@ const Login = ({setUser, setLogin}) => {
       } = useForm()
 
     const userSignup = async (data) => {
-        let r = await fetch("http://localhost:3000", {method: 'POST', headers: {'Content-Type': 'application/json',}, body: JSON.stringify(data)})
+        let r = await fetch("http://localhost:3000/", {method: 'POST', headers: {'Content-Type': 'application/json',}, body: JSON.stringify(data)})
         let res = await r.text()
         setUser(true)
         setLogin(true)
